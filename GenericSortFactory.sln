@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSortFactory", "GenericSortFactory\GenericSortFactory.csproj", "{D9F16730-47D1-4916-9A48-D3E71901D672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9F16730-47D1-4916-9A48-D3E71901D672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F16730-47D1-4916-9A48-D3E71901D672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F16730-47D1-4916-9A48-D3E71901D672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F16730-47D1-4916-9A48-D3E71901D672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {198AA0A3-50B0-48ED-903D-9234009B6B8E}
+	EndGlobalSection
+EndGlobal
