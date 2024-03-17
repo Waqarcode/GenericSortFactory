@@ -1,22 +1,26 @@
 ﻿
 
 
+using GenericSortFactory.ArrayFactory.Interface;
+using GenericSortFactory.ArrayFactory;
+using GenericSortFactory.ArraySortUtility;
+
 public class Program
 {
     public static void Main(string[] args){
-        ISortableObject<int[]> intSortableObjectArray = new IntArrary();
-        ISortableObject<string[]> stringSortableObjectArray = new StringArray();
-        ISortableObject<Employee[]> employeeSortableObjectArray = new EmployeeArray();
+        IArrayFactory<int[]> intArrayFactory = new IntArrayFactory();
+        IArrayFactory<string[]> stringArrayFactory = new StringArrayFactory();
+        IArrayFactory<Employee[]> employeeArrayFactory = new EmployeeArrayFactory();
 
-        int[] intArray = intSortableObjectArray.Create();
-        string[] stringArray = stringSortableObjectArray.Create();
-        Employee[] employeeArray = employeeSortableObjectArray.Create();
+        int[] intArray = intArrayFactory.Create();
+        string[] stringArray = stringArrayFactory.Create();
+        Employee[] employeeArray = employeeArrayFactory.Create();
 
-        SortArray<int> sortIntArray = new SortArray<int>();
+        ArraySorter<int> sortIntArray = new ArraySorter<int>();
         sortIntArray.sorting(intArray);
-        SortArray<string> sortStringArray = new SortArray<string>();
+        ArraySorter<string> sortStringArray = new ArraySorter<string>();
         sortStringArray.sorting(stringArray);
-        SortArray<Employee> sortEmployeeArray = new SortArray<Employee>();
+        ArraySorter<Employee> sortEmployeeArray = new ArraySorter<Employee>();
         sortEmployeeArray.sorting(employeeArray);
 
         DisplayArray(intArray, "Int");
@@ -35,25 +39,25 @@ public class Program
     }
 }
 
-public interface ISortableObject<T>{
+/*public interface IArrayFactory<T>{
     T Create();
 }
 
-public class IntArrary: ISortableObject<int[]>
+public class IntArrayFactory: IArrayFactory<int[]>
 {
     public int[] Create(){
         return new int[] {5, 4, 1, 2, 3, 6};
     }
 }
 
-public class StringArray: ISortableObject<string[]>
+public class StringArrayFactory: IArrayFactory<string[]>
 {
     public string[] Create(){
         return  new string[] { "Bob", "Henry", "Andy", "Greg" };
     }
 }
 
-public class EmployeeArray: ISortableObject<Employee[]>
+public class EmployeeArrayFactory: IArrayFactory<Employee[]>
 {
     public Employee[] Create(){
         return  new Employee[]
@@ -83,7 +87,7 @@ public class  Employee : IComparable<Employee>
     }
 }
 
-public class SortArray<T> where T:IComparable<T>
+public class ArraySorter<T> where T:IComparable<T>
 {
     public void sorting(T[] array)
     {
@@ -109,4 +113,4 @@ public class SortArray<T> where T:IComparable<T>
         array[j+1] = temp;
     }
 
-}
+}*/
